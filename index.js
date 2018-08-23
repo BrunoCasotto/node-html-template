@@ -24,7 +24,7 @@ const init = async () => {
     engines: {
       html: require('nunjucks-hapi')
     },
-    path: 'views'
+    path: Path.join(__dirname, 'src', 'views')
   })
 
   server.route({
