@@ -3,6 +3,7 @@
 
 {%block aditionalScript%}
   <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
 {% endblock%}
 
 {% block style %}
@@ -12,10 +13,22 @@
 {% endblock %}
 
 {% block content %}
-  <amp-img src="dog.jpg" alt="A dog picture" height="400" width="800"></amp-img>
+  <amp-sidebar id="sidebar1" layout="nodisplay" side="right">
+    <ul>
+      <li>Nav item 1</li>
+      <li><a href="#idTwo" on="tap:idTwo.scrollTo">Nav item 2</a></li>
+      <li>Nav item 3</li>
+      <li><a href="#idFour" on="tap:idFour.scrollTo">Nav item 4</a></li>
+      <li>Nav item 5</li>
+      <li>Nav item 6</li>
+    </ul>
+  </amp-sidebar>
+
+  <button class="hamburger" on='tap:sidebar1.toggle'></button>
+
+
   <amp-lightbox id="my-lightbox"
     layout="nodisplay">
-    
     <div class="lightbox"
       on="tap:my-lightbox.close"
       role="button"
