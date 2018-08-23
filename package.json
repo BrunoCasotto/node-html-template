@@ -4,7 +4,9 @@
   "description": "a simple blog",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -e html,js,json"
   },
   "keywords": [
     "blog"
@@ -12,9 +14,9 @@
   "author": "Bruno casotto",
   "license": "ISC",
   "dependencies": {
-    "handlebars": "^4.0.11",
     "hapi": "^17.5.2",
     "inert": "^5.1.0",
+    "nunjucks-hapi": "^2.1.0",
     "vision": "^5.3.3"
   }
 }

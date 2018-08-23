@@ -2,6 +2,7 @@
 
 const Hapi = require('hapi')
 const routes = require('./routes')
+const Path = require('path')
 
 const server = Hapi.server({
   port: process.env.PORT || 4000,
@@ -15,9 +16,8 @@ const init = async () => {
 
   server.views({
     engines: {
-      html: require('handlebars')
+      html: require('nunjucks-hapi')
     },
-    relativeTo: __dirname,
     path: 'views'
   })
 

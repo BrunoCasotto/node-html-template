@@ -5,7 +5,7 @@ module.exports = [
     method: 'GET',
     path: '/',
     handler: (request, reply) => {
-      return reply.view('index', { message: 'Hello Blog' })
+      return reply.view('pages/home', { message: 'Hello Blog' })
     }
   }
 ]
