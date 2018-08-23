@@ -1,7 +1,7 @@
 'use strict'
 
 const Hapi = require('hapi')
-const routes = require('./routes')
+const routes = require('./src/routes')
 const Path = require('path')
 
 const server = Hapi.server({
