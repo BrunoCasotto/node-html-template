@@ -6,19 +6,35 @@ const Path = require('path')
 
 const server = Hapi.server({
   port: process.env.PORT || 4000,
-  host: 'localhost'
+  host: 'localhost',
+  routes: {
+    files: {
+      relativeTo: Path.join(__dirname, 'public')
+    }
+  }
 })
 
 server.route(routes)
 
 const init = async () => {
   await server.register(require('vision'))
+  await server.register(require('inert'))
 
   server.views({
     engines: {
       html: require('nunjucks-hapi')
     },
     path: 'views'
+  })
+
+  server.route({
+    method: 'GET',
+    path: '/{filename}',
+    handler: {
+      file: function (request) {
+        return request.params.filename;
+      }
+    }
   })
 
   await server.start()
