@@ -1,16 +1,15 @@
 'use strict'
-const Path = require('path')
-const fs = require('fs')
+const FileHelper = require('./helpers/file')
 
 module.exports = [
   {
     method: 'GET',
     path: '/',
     handler: (request, reply) => {
-      // const pathToFile = Path.join(__dirname, 'resources', 'styles', 'home.css')
-      // let styleContent = fs.readFileSync(pathToFile, 'utf8');
-      // let styleContent = ''
-      return reply.view('pages/home', { style: '' })
+      const pathToStyle = FileHelper.getStylePath('home.css')
+      const styleFile = FileHelper.readFile(pathToStyle)
+
+      return reply.view('pages/home', { style: styleFile })
     }
   }
 ]
