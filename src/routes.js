@@ -11,5 +11,18 @@ module.exports = [
 
       return reply.view('pages/home', { style: styleFile })
     }
+  },
+  {
+    method: 'GET',
+    path: '/dogs',
+    handler: (request, reply) => {
+      const dogList = [
+        {breed: 'labrador', img:'/dog.jpg'},
+        {breed: 'labrador', img:'/dog.jpg'},
+        {breed: 'labrador', img:'/dog.jpg'}
+      ]
+
+      return dogList
+    }
   }
 ]

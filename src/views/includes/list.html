@@ -1,0 +1,13 @@
+{%block aditionalScript%}
+  <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+{% endblock%}
+
+<amp-list width="auto"
+  height="100"
+  layout="fixed-height"
+  src="/dogs">
+  <template type="amp-mustache">
+    <label>{{breed}}</label>
+  </template>
+</amp-list>
