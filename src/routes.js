@@ -16,11 +16,13 @@ module.exports = [
     method: 'GET',
     path: '/dogs',
     handler: (request, reply) => {
-      const dogList = [
-        {breed: 'labrador', img:'/dog.jpg'},
-        {breed: 'labrador', img:'/dog.jpg'},
-        {breed: 'labrador', img:'/dog.jpg'}
-      ]
+      const dogList ={
+        items:  [
+          {breed: 'labrador', img:'/dog.jpg'},
+          {breed: 'labrador', img:'/dog.jpg'},
+          {breed: 'labrador', img:'/dog.jpg'}
+        ]
+      }
 
       return dogList
     }
