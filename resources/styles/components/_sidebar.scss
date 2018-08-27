@@ -1,0 +1,14 @@
+@import './../base/vars';
+
+.sidebar {
+  position: relative;
+  padding: 10px;
+  box-shadow: 0 0 5px 2px $shadow-secondary;
+  background: $background-primary;
+
+  &__open {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}

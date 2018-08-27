@@ -1,0 +1,13 @@
+@import './../base/vars';
+
+.header {
+  height: 50px;
+  box-shadow: 0 0 5px 2px $shadow-primary;
+  padding: 5px 10px;
+  
+  &__title {
+    text-align: center;
+    margin-top: 10px;
+    font-family: $primary-font;
+  }
+}
