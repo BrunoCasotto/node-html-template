@@ -18,6 +18,14 @@ html {
     html a:hover {
       text-decoration: none; }
 
+.container {
+  padding: 0 20px;
+  max-width: 930px;
+  margin: 0 auto; }
+
+hr {
+  margin: 5px 0; }
+
 .header {
   height: 50px;
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
@@ -63,3 +71,14 @@ html {
   display: block;
   margin: 0 auto;
   max-height: 350px; }
+
+.text-section {
+  padding: 10px 0; }
+  .text-section__image {
+    overflow: hidden;
+    margin-bottom: -20%;
+    opacity: .8; }
+  .text-section__title {
+    margin-bottom: 10px; }
+  .text-section__text {
+    text-align: justify; }

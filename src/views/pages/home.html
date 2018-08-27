@@ -11,6 +11,7 @@
   {%include "includes/scripts/amp-state.html" %}
   {%include "includes/scripts/amp-carousel.html" %}
   {%include "includes/scripts/amp-sidebar.html" %}
+  {%include "includes/scripts/amp-fx-collection.html" %}
 {% endblock %}
 
 {% block state %}
@@ -25,7 +26,15 @@
 
 
 {% block content %}
-  <amp-layout layout="responsive" width="1" height="1">
-   {%include "includes/components/amp-carousel.html" %}
-  </amp-layout>
+    <div amp-fx="parallax" data-parallax-factor="1.2" data-duration="100ms">
+    {% include "includes/components/amp-carousel.html" %}
+    </div>
+
+  <div class="container">
+    {% for section in posts %}
+      {% include "includes/components/text-section.html" %}
+      <hr></hr>
+    {% endfor %}
+  </div>
+
 {% endblock %}

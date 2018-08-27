@@ -1,0 +1,19 @@
+@import './../base/vars';
+
+.text-section {
+  padding: 10px 0;
+
+  &__image {
+    overflow: hidden;
+    margin-bottom: -20%;
+    opacity: .8;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    text-align: justify;
+  }
+}
