@@ -22,6 +22,9 @@
 
   <body>
     {% block state %}{% endblock %}
+    <header class="header">
+      {% include "includes/components/amp-sidebar.html" %}
+    </header>
     {% block content %}{% endblock %}
   </body>
 </html>
