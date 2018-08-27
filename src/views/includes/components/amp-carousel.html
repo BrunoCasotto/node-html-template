@@ -1,0 +1,15 @@
+ <amp-carousel
+  width="450"
+  height="200"
+  controls
+  loop
+  autoplay
+  layout="responsive"
+  class="carousel"
+  type="slides"
+  on="slideChange:AMP.setState({selected: {slide: event.index}})"
+  >
+  {% for banner in banners %}
+    <amp-img src="{{ banner.src }}" height="300" alt="{{ banner.alt }}"></amp-img>
+  {% endfor %}
+</amp-carousel>

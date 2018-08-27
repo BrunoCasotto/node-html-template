@@ -1,0 +1,13 @@
+<p class="pagination">
+  {% for banner in banners %}
+    {% if loop.first %}
+      <span [class]="selected.slide == {{ loop.index0 }} ? 'current' : ''" class="current">
+        {{loop.index}}
+      </span>
+    {% else %}
+      <span [class]="selected.slide == {{ loop.index0 }} ? 'current' : ''">
+        {{loop.index}}
+      </span>
+    {% endif %}
+  {% endfor %}
+</p>

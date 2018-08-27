@@ -26,18 +26,6 @@
 
 {% block content %}
   <amp-layout layout="responsive" width="1" height="1">
-    <amp-carousel height="300" layout="fixed-height" type="slides"
-      on="slideChange:AMP.setState({selected: {slide: event.index}})">
-
-      <amp-img src="/dog.jpg" height="300" alt="a sample image"></amp-img>
-      <amp-img src="/dog.jpg" height="300" alt="another sample image"></amp-img>
-      <amp-img src="/dog.jpg" height="300" alt="and another sample image"></amp-img>
-    </amp-carousel>
-
-    <p class="pagination">
-      <span [class]="selected.slide == 0 ? 'current' : ''" class="current">1</span>
-      <span [class]="selected.slide == 1 ? 'current' : ''" class="">2</span>
-      <span [class]="selected.slide == 2 ? 'current' : ''" class="">3</span>
-    </p>
+   {%include "includes/components/amp-carousel.html" %}
   </amp-layout>
 {% endblock %}
