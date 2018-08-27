@@ -5,10 +5,28 @@
   padding: 10px;
   box-shadow: 0 0 5px 2px $shadow-secondary;
   background: $background-primary;
+  padding-right: 30px;
 
   &__open {
     position: absolute;
     right: 10px;
     top: 10px;
+  }
+
+  &__list {
+    &__item {
+      height: 20px;
+      padding: 5px;
+      border-bottom: 1px solid $border-primary;
+    }
+    
+    &__item a {
+      color: $font-color-primary;
+      font-size: 16px;
+      line-height: 1.4;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
   }
 }

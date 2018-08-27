@@ -3,6 +3,9 @@ $color-primary: blue;
 $color-secondary: red;
 $color-tertiary: green;
 
+//font color
+$font-color-primary: #000;
+
 //backgrounds
 $background-primary: #fff;
 
@@ -14,6 +17,10 @@ $breakpoint-sm: 540px;
 //shadows
 $shadow-primary: rgba(0,0,0,.1);
 $shadow-secondary: rgba(255,255,255,.1);
+
+//border
+$border-primary: rgba(0,0,0,.1);
+$border-secondary: rgba(255,255,255,.1);
 
 //font family
 $primary-font:'Poiret One', 'cursive';
