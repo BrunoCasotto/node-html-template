@@ -2,6 +2,28 @@
   padding: 0 20px;
   max-width: 930px;
   margin: 0 auto;
+
+  &__section {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    
+    &__block {
+      flex: 1;
+      min-width: 320px;
+      margin-bottom: 10px;
+      font-size: 16px;
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      &--small {
+        min-width: 200px;
+        font-size: 16px;
+      }
+    }
+  }
 }
 
 hr {

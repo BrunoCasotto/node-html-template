@@ -22,6 +22,20 @@ html {
   padding: 0 20px;
   max-width: 930px;
   margin: 0 auto; }
+  .container__section {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap; }
+    .container__section__block {
+      flex: 1;
+      min-width: 320px;
+      margin-bottom: 10px;
+      font-size: 16px; }
+      .container__section__block:not(:last-child) {
+        margin-right: 10px; }
+      .container__section__block--small {
+        min-width: 200px;
+        font-size: 16px; }
 
 hr {
   margin: 5px 0; }
@@ -82,3 +96,16 @@ hr {
     margin-bottom: 10px; }
   .text-section__text {
     text-align: justify; }
+
+.news-section__title {
+  color: #000; }
+  .news-section__title:hover {
+    color: #333333; }
+
+.news-section__img {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto 10px auto; }
+
+.news-section__img img {
+  max-width: 100%; }

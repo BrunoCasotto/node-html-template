@@ -1,0 +1,21 @@
+<div class="news-section">
+  <a href="{{section.href}}">
+    <h1 class="news-section__title" >{{section.title}}</h1>
+  </a>
+
+  <a href="{{section.href}}">
+    <div class="news-section__img">
+      <amp-img
+        class="img" src="{{ section.src }}"
+        layout="responsive"
+        height="400"
+        width="900"
+        alt="{{ section.alt }}"
+      ></amp-img>
+    </div>
+  </a>
+
+  <p class="news-section__description">
+    {{section.description}}
+  </p>
+</div>

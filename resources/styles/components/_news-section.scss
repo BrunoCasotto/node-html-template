@@ -1,0 +1,21 @@
+@import './../base/vars';
+.news-section {
+
+  &__title {
+    color: $font-color-primary;
+
+    &:hover {
+      color: lighten($font-color-primary, 20);
+    }
+  }
+
+  &__img {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto 10px auto;
+  }
+
+  &__img img {
+    max-width: 100%;
+  }
+}

@@ -31,10 +31,21 @@
     </div>
 
   <div class="container">
-    {% for section in posts %}
-      {% include "includes/components/text-section.html" %}
-      <hr></hr>
-    {% endfor %}
+    <div class="container__section">
+      {% for section in posts %}
+        <div class="container__section__block">
+          {% include "includes/components/text-section.html" %}
+          <hr></hr>
+        </div>
+      {% endfor %}
+
+      {% for section in news %}
+        <div class="container__section__block">
+          {% include "includes/components/news-section.html" %}
+          <hr></hr>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 
 {% endblock %}
